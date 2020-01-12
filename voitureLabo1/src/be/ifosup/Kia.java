@@ -18,6 +18,17 @@ public class Kia extends Voiture{
         this.auto = auto;
     }
 
+    @Override
+    public String toString() {
+        return "Kia{" +
+                "modele='" + modele + '\'' +
+                ", Color='" + Color + '\'' +
+                ", portes=" + portes +
+                ", power=" + power +
+                ", auto=" + auto +
+                '}';
+    }
+
     //--------------------------------------------------------------------------------------------------------------//
 
     public String getModele() {
@@ -61,14 +72,5 @@ public class Kia extends Voiture{
     }
 
     //-----------------------------------------------------------------------------------------------------------------------//
-
-    public void accelere(){
-        System.out.println("on accélère en kia");
-        super.accelerer();
-    }
-
-
-
-
 
 }

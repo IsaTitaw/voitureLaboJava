@@ -4,10 +4,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+                int vitesse = 0;
                  Kia soulAuto = new Kia("tpt personnes", 4, "Voiture", "Soul", "Noir", 5, 150, true); // voiture automatique
 
-                Kia PicantoMan = new Kia("tpt personnes", 4, "Voiture", "Picanto", "Rouge", 3, 90, false); // voiture boite manuel
+                Kia picantoMan = new Kia("tpt personnes", 4, "Voiture", "Picanto", "Rouge", 3, 90, false); // voiture boite manuel
+
+//        System.out.println(soulAuto);
+//        System.out.println(picantoMan);
+//
+//        soulAuto.accelerer(15);
+//        soulAuto.changerRapport(soulAuto.auto, vitesse);
+//        soulAuto.accelerer(60);
+//        soulAuto.changerRapport(soulAuto.auto, vitesse);
+//        soulAuto.tourner(60, "droite");
+        picantoMan.accelerer(60);
+        picantoMan.changerRapport(picantoMan.auto, vitesse);
+
 
 
 //                // Test voiture Automatique
