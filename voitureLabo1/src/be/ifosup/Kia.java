@@ -1,7 +1,8 @@
 package be.ifosup;
 
 public class Kia extends Voiture{
-   private String modele;
+
+    private String modele;
    private String Color;
     private int portes;
     private int power;
@@ -9,8 +10,8 @@ public class Kia extends Voiture{
 
     //------------------------------------------------------------------------------------------------------------//
 
-    public Kia(String usage, int roues, String type, String modele, String color, int portes, int power, boolean auto) {
-        super(usage, roues, type);
+    public Kia(String usage, int vitesse, int angle, String direction, String modele, String color, int portes, int power, boolean auto) {
+        super(usage, vitesse, angle, direction);
         this.modele = modele;
         Color = color;
         this.portes = portes;

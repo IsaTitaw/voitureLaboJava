@@ -1,55 +1,78 @@
 package be.ifosup;
 
 public class Voiture extends Vehicule {
-    private int roues;              //tjs 4 roues
-    private String type;            //tjs voiture
+    private static final int roues=4;
+    private static final String type="voiture";
+    private int vitesse;
+    private int angle;
+    private String direction;
 
 //----------------------------------------------------------------------------------------------//
-    public Voiture(String usage, int roues, String type) {
+
+    public Voiture(String usage, int vitesse, int angle, String direction) {
         super(usage);
-        this.roues = roues;
-        this.type = type;
+        this.vitesse = vitesse;
+        this.angle = angle;
+        this.direction = direction;
     }
 
     @Override
     public String toString() {
         return "Voiture{" +
-                "roues=" + roues +
-                ", type='" + type + '\'' +
+                "vitesse=" + vitesse +
+                ", angle=" + angle +
+                ", direction='" + direction + '\'' +
                 '}';
     }
 
     //------------------------------------------------------------------------------------------//
-    public int getRoues() {
+
+    public static int getRoues() {
         return roues;
     }
 
-    public void setRoues(int roues) {
-        this.roues = roues;
-    }
-
-    public String getType() {
+    public static String getType() {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public int getVitesse() {
+        return vitesse;
+    }
+
+    public void setVitesse(int vitesse) {
+        this.vitesse = vitesse;
+    }
+
+    public int getAngle() {
+        return angle;
+    }
+
+    public void setAngle(int angle) {
+        this.angle = angle;
+    }
+
+    public String getDirection() {
+        return direction;
+    }
+
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
 
     //------------------------------------------------------------------------------------//
 
     public void accelerer(int vitesse){
-        System.out.println("On accélère ou on décélère avec la classe parent à une vitesse de: "+ vitesse);
+        System.out.println("On accélère ou on décélère à une vitesse de: "+ vitesse);
     }
 
 
 
 
     public void changerRapport(boolean auto, int vitesse){
-        if (auto = true){
+        if (auto){
             System.out.println("La voiture change les rapports toute seule");
             }else{
-                if (auto = false){
+                if (auto == false){
                     if (vitesse > 200){
                         System.out.println("Le moteur a explosé!");
                     }else if (vitesse > 110){
@@ -59,9 +82,9 @@ public class Voiture extends Vehicule {
                     }else if (vitesse > 60){
                         System.out.println("Passez le 4ème vitesse");
                     }else if (vitesse > 30){
-                        System.out.println("Passez le 4ème vitesse");
+                        System.out.println("Passez le 3ème vitesse");
                     }else if (vitesse > 10){
-                        System.out.println("Passez le 4ème vitesse");
+                        System.out.println("Passez le 2ème vitesse");
                     }else{
                         System.out.println("On est à l'arrêt ou on a oublié le frein à main en côte!");
                     }
